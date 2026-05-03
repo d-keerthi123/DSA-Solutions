@@ -21,8 +21,8 @@ class Solution {
                 newHead=temp;
                 prev=newHead;
             }else{
-                prev.next=temp;
-                prev=temp;
+                prev.next=temp; //links the new node to the list.
+                prev=temp; //moves the prev pointer so next time we append after the new last node.
             }
             curr=curr.next;
         }
