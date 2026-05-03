@@ -2,7 +2,7 @@
 //Add digits + carry → store last digit → forward carry → repeat
 
 // Tc: O(max(m,n)) -->we traverse through both list once and each node exactly once
-//Sc : O(n)
+//Sc : O(1), total O(n) bcz of output list
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
