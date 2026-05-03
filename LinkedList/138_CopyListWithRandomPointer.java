@@ -12,7 +12,7 @@ class Solution {
         Node prev=null;// to create a deep copy -- new list
         Node newHead=null;
 
-        while(curr != null){
+        while(curr != null){  //O(n)
             Node temp= new Node(curr.val);
 
             mp.put(curr,temp);//storing
@@ -30,7 +30,7 @@ class Solution {
         //fill random pointers
         curr=head;
         Node newCurr=newHead;
-        while(curr != null){
+        while(curr != null){ //O(n)
             if(curr.random == null){
                 newCurr.random=null;
             }else{
