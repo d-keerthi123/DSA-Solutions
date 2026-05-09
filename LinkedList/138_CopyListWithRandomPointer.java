@@ -1,6 +1,6 @@
 //Approach 1: Intutive
 //Tc:O(n)   
-//Sc: O(n) --> bcz we are using hashmap to store the original node --> its copied node
+//Sc: O(n) --> bcz we are using hashmap to store the original node --> and its copy node
 //we are using hash map because we need a fast way to find the copied node corresponding to any original node
 class Solution {
     public Node copyRandomList(Node head) {
