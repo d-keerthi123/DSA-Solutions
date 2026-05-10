@@ -71,7 +71,7 @@ class Solution {
         ListNode nextGroupStart=kth.next;
 
         //Reverse
-        ListNode prev=nextGroupStart;//reconnects the reversed group to the rest of the list automatically.
+        ListNode prev=nextGroupStart;//While reversing, attach tail of reversed group to next group automatically.
         ListNode curr=groupStart;
 
         while(curr != nextGroupStart){
