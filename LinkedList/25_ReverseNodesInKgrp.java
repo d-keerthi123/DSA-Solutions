@@ -59,8 +59,8 @@ class Solution {
             //Find Kth node
             ListNode kth=prevGroupEnd;
             for(int i=0;i<k;i++){
-                kth=kth.next;
-                if(kth== null){
+                kth=kth.next; // check if valid k nodes exist
+                if(kth== null){ // if not ,then stop 
                     return dummy.next;
                 }
             }
@@ -71,7 +71,7 @@ class Solution {
         ListNode nextGroupStart=kth.next;
 
         //Reverse
-        ListNode prev=nextGroupStart;
+        ListNode prev=nextGroupStart;//reconnects the reversed group to the rest of the list automatically.
         ListNode curr=groupStart;
 
         while(curr != nextGroupStart){
