@@ -72,6 +72,8 @@ class Solution {
 
         //Reverse
         ListNode prev=nextGroupStart;//While reversing, attach tail of reversed group to next group automatically.
+            //[1 2 3] -> 4  before reversing
+            //3 -> 2 -> 1 -> 4 after reversing  
         ListNode curr=groupStart;
 
         while(curr != nextGroupStart){
