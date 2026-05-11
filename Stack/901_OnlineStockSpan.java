@@ -7,7 +7,7 @@ class StockSpanner {
         int price;
         int span;
 
-        pair(int price,int span){
+        pair(int price,int span){ //constuctor
             this.price=price;
             this.span=span;
         }
