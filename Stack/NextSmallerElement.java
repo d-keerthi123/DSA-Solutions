@@ -1,4 +1,4 @@
-////GeeksForGeeks Question
+//GeeksForGeeks Question
 //TC:O(n)
 //SC:O(n)
 
