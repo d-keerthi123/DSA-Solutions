@@ -1,3 +1,4 @@
+//GeeksForGeeks Quetsion
 //TC:O(n) Each element is:pushed once into stack and popped at most once from  O(2n)
 //for loop runs n times
 //O(n + n) = O(n)
