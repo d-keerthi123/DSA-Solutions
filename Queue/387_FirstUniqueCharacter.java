@@ -1,22 +1,22 @@
-//Time Complexity - O(n)
-//Space Complexity -O(n)
-
+//TC:O(n)
+//Sc:O(n) due to queue 
 class Solution {
     public int firstUniqChar(String s) {
-        int freq[]=new int[26]; // to track how many times a character is repeated in a string
-        Queue<Integer> q= new LinkedList<>(); // to store characters
+        Queue<Integer>q= new LinkedList<>();
+        int freq[]=new int[26]; // a-z  O(1) -->fixed size
 
         for(int i=0;i<s.length();i++){
-            char ch=s.charAt(i); //gives  character at thar index
-            q.add(i);
-            freq[ch-'a']++;
+            char ch=s.charAt(i);
+            q.add(i); //store index
+            freq[ch-'a']++; //increase the freq
 
             while(!q.isEmpty() && freq[s.charAt(q.peek())-'a']>1){
-                q.remove();
+                q.remove(); //remove repeating character index
             }
         }
-        //2 cases - queue becomes empty or feq==1 
-        return q.isEmpty()? -1:q.peek();
-
+        if(q.isEmpty()){
+            return -1; //No non-repeating letter
+            }
+        return q.peek();
     }
 }
