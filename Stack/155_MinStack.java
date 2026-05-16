@@ -8,7 +8,7 @@ class MinStack {
         minStack=new  Stack<>();
     }
     
-    public void push(int val) {
+    public void push(int val) {//O(1)
         s.push(val);
         if(minStack.isEmpty()){
             minStack.push(s.peek());
@@ -19,19 +19,19 @@ class MinStack {
         
     }
     
-    public void pop() {
+    public void pop() {//O(1)
        int removed=s.pop();
        if(removed == minStack.peek()){
         minStack.pop();
        }
     }
     
-    public int top() {
+    public int top() { //O(1)
         int top=s.peek();
         return top;
     }
     
-    public int getMin() {
+    public int getMin() {//O(1)
         if(s.isEmpty()){
             return Integer.MIN_VALUE;
         }
