@@ -15,7 +15,7 @@ class Trie {
         root= new Node();
     }
     
-    public void insert(String word) { //O(L)
+    public void insert(String word) { //O(L)  L---> length of word
         Node curr=root;
         for(int level=0;level<word.length();level++){
             char ch=word.charAt(level);
@@ -27,7 +27,7 @@ class Trie {
         curr.endOfWord = true;
     }
     
-    public boolean search(String word) { //O(L)
+    public boolean search(String word) { //O(L)  L---> length of word
         Node curr=root;
         for(int level=0;level<word.length();level++){
             char ch=word.charAt(level);
@@ -39,7 +39,7 @@ class Trie {
         return curr.endOfWord;// if eow = true --> returns true else false
     }
     
-    public boolean startsWith(String prefix) { 
+    public boolean startsWith(String prefix) { //O(L)  L---> length of prefix
          Node curr=root;
         for(int level=0;level<prefix.length();level++){
             char ch=prefix.charAt(level);
