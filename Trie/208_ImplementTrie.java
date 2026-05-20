@@ -34,7 +34,7 @@ class Trie {
             if(curr.children[ch-'a']== null){
                 return false;
             }
-            curr=curr.children[ch-'a'];
+            curr=curr.children[ch-'a']; //This line moves curr to the next node in the Trie.
         }
         return curr.endOfWord;// if eow = true --> returns true else false
     }
