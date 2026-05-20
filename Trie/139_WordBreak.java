@@ -1,3 +1,7 @@
+//Approach 1: Substring
+//This solution works but is inefficient because: wordBreak("sameSubstring") can be recomputed many times. So TC becomes exponential: O(2^n)
+//That’s why we use memoization / DP in optimized solutions.
+
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
         //base case
