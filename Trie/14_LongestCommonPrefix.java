@@ -34,9 +34,6 @@ class Solution {
          
          for(int i=0;i<word.length();i++){
              int idx=word.charAt(i)-'a';
-             
-             
-             
              curr = curr.children[idx];
               
              if(curr.freq == N){
