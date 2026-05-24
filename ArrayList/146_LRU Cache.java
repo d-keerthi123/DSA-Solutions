@@ -1,3 +1,4 @@
+//Approach 1: 
 class LRUCache {
     class Pair {
     int key;
@@ -56,3 +57,5 @@ class LRUCache {
             cache.add(new Pair(key,value));
     }
 }
+
+//Approach 2: optimal  Hashmap + Doubly Linked List
