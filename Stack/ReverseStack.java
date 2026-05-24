@@ -1,5 +1,7 @@
 //GeeksForGeeks Question
 //TC : O(n^2)
+//reverseStack() runs n times.Each time pushAtBottom() may take up to n
+//So: n × n = O(n²)
 //SC:  O(n) Recursive call stack depth=n and No extra data structures used
 
 class Solution {
