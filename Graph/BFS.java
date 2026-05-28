@@ -1,3 +1,5 @@
+//TC:O(n)
+
 class Solution {
     public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
         // code here
