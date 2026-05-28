@@ -1,4 +1,4 @@
-//TC:O( V+E) 
+//TC:O(V+E) V or E , the greater one controls the bfs Tc
 //SC:O(V)
 
 class Solution {
