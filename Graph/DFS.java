@@ -1,3 +1,5 @@
+//TC:O(V+E)
+
 class Solution {
     public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
         // code here
