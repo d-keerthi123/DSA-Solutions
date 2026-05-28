@@ -1,4 +1,4 @@
-//TC:O( V+E)  --> V or E the ggreater one dominates
+//TC:O( V+E) 
 //SC:O(V)
 
 class Solution {
