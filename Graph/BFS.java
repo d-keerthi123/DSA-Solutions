@@ -1,4 +1,5 @@
-//TC:O(n)
+//TC:O( V+E)  --> V or E the ggreater one dominates
+//SC:O(V)
 
 class Solution {
     public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
