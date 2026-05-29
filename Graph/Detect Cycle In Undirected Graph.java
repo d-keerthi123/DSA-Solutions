@@ -1,5 +1,15 @@
+//TC:O(V+E)
+//every vertex visited once → O(V) and every edge checked once (technically twice in adjacency list of undirected graph) → O(E)
+//Total:O(V+E)
+
+//SC:O(V+E)
+//Adjacency list:O(V + E)
+//Visited array:O(V)
+//Recursion stack (worst case long chain):O(V)
+//Total:O(V + E)
+
 class Solution {
-    public boolean isCycle(int V, int[][] edges) {
+    public boolean isCycle(int V, int[][] edges) {//O(E)
         // Code here
         
          @SuppressWarnings("unchecked")
