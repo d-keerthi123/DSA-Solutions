@@ -8,6 +8,9 @@
 //Recursion stack (worst case long chain):O(V)
 //Total:O(V + E)
 
+//detectCycleUtil() :checks ONE connected component
+//detectCycle() :checks ALL components
+
 class Solution {
     public boolean isCycle(int V, int[][] edges) {//O(E)
         // Code here
@@ -28,10 +31,16 @@ class Solution {
         return detectCycle(graph);
     }
     
-    public boolean detectCycle(ArrayList<Integer>[] graph){
-        boolean[] visited= new boolean[graph.length];
+    public boolean detectCycle(ArrayList<Integer>[] graph){ 
+        //Handles:  disconnected graph
+        //start DFS from every disconnected part
         
-        for(int i=0;i<graph.length;i++){
+        boolean[] visited= new boolean[graph.length];
+
+        //Meaning: “For every vertex, if I haven’t visited it yet, start DFS from there.”
+        //That guarantees every component is checked.
+        
+        for(int i=0;i<graph.length;i++){ 
             if(!visited[i]){
                 if(detectCycleUtil(graph,visited,i,-1)){
                     return true; // cycle exists in one of the parts
@@ -43,7 +52,9 @@ class Solution {
     
     public boolean detectCycleUtil(ArrayList<Integer>[] graph,boolean[] visited, int curr,int parent){
         visited[curr]=true;
+        
         for(int i=0;i<graph[curr].size();i++){
+            
             int neighbour=graph[curr].get(i);
             
              //unvisited
