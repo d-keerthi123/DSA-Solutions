@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     
-    public boolean checkPath(int V, int[][] edges, int src, int dest){
+    public boolean checkPath(int V, int[][] edges, int src, int dest){   //build graph - adj list
         @SuppressWarnings("unchecked")
         ArrayList<Integer>[] graph=new ArrayList[V];
         
@@ -25,8 +25,6 @@ class Solution {
     }
     public boolean hasPath( ArrayList<Integer>[] graph,int src, int dest,
     boolean[] visited) {
-        // Code here
-        
         
         if(src== dest){
             return true;
@@ -38,8 +36,10 @@ class Solution {
             
             int neighbour=graph[src].get(i);
             
-            if(! visited[neighbour] && hasPath(graph ,neighbour,dest,visited)){
-                return true;
+            if(! visited[neighbour]){
+                if(hasPath(graph ,neighbour,dest,visited)){
+                    return true;
+                }
             }
         }
         
