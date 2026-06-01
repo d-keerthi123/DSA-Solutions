@@ -1,3 +1,5 @@
+//TC:O(V+E)
+
 class Solution {
     public boolean isCyclic(int V, int[][] edges) {
         //build graph
