@@ -1,3 +1,5 @@
+//TC:O(V+E)
+
 class Solution {
     public boolean isBipartite(int V, int[][] edges) {
         //build a graph
