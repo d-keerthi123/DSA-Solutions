@@ -10,7 +10,7 @@ class Solution {
             int u=prerequisites[i][0];
             int v=prerequisites[i][1];
 
-            graph[u].add(v);
+            graph[v].add(u); //b-->a
         }
 
         //calculate indegree
