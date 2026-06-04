@@ -49,7 +49,7 @@ class Solution {
             }
             
         }
-        stack[curr]=false;
+        stack[curr]=false; //After all neighbors are processed, remove the current node from the recursion stack (stack[curr] = false
         return false;
     }
 }
