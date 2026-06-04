@@ -42,7 +42,7 @@ class Solution {
                         int neighbour=graph[curr].get(j);
                         
                         if(colour[neighbour] == -1){
-                            int nextColour = colour[curr]== 0?1 :0;
+                            int nextColour = colour[curr]== 0?1 :0; // if neighbour has no colour, then we will give opposite colour of the curr node
                             colour[neighbour] = nextColour;
                             q.add(neighbour);
                             
