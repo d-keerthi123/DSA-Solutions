@@ -1,3 +1,12 @@
+//Time Complexity = O(N²)
+//There are N edges.For every edge, you may run a DFS:
+//dfs(graph, u, v, visited)
+//In the worst case, DFS can visit almost all vertices and edges already present in the graph.
+//So each DFS costs: O(N) and you do it for up to N edges:
+//O(N) × O(N) = O(N²)
+
+//SC:O(N)
+
 class Solution {
 
     public boolean dfs(HashMap<Integer,ArrayList<Integer>> graph , int u,int v, boolean[] visited){
