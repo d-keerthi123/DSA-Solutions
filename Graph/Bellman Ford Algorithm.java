@@ -27,11 +27,6 @@ class Solution {
        }
        
         int dist[]= new int[graph.length];
-        // for(int i=0;i<dist.length;i++){
-        //     if(i != src){
-        //         dist[i]=Integer.MAX_VALUE;//infinity
-        //     }
-        // }
         Arrays.fill(dist, (int)1e8);
         dist[src] = 0;
         
@@ -54,6 +49,12 @@ class Solution {
                 }
             }
         }
+
+// During V-1 passes → relaxations are expected.
+//After V-1 passes → relaxations should stop.
+//If they don't stop → negative cycle. Thats why its outside V-1 loop
+
+        
              // Negative Cycle Detection
             for (int j = 0; j < V; j++) {
                 for (int k = 0; k < graph[j].size(); k++) {
