@@ -1,5 +1,5 @@
-//TC:O(m*n)
-//Sc:O(m*n)
+//TC:O(m*n) Each cell is visited once by DFS.
+//Sc:O(m*n) worst case: entire grid is one island
 
 class Solution {
     public void dfs(char[][] grid,int i,int j){
