@@ -18,6 +18,7 @@ class Solution {
             return longestCommonSubsequenceH(text1,text2,n-1,m-1)+1;
         }
         else{
+            //case 2:last character is different 
             int ans1=longestCommonSubsequenceH(text1,text2,n-1,m);
             int ans2=longestCommonSubsequenceH(text1,text2,n,m-1);
             return Math.max(ans1,ans2);
