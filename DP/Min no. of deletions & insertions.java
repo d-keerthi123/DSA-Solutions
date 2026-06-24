@@ -1,3 +1,6 @@
+//Approach:Tabulation
+//TC:O(nxm)
+
 class Solution {
     public int minOperations(String s1, String s2) {
         // Your code goes here
