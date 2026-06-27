@@ -1,6 +1,6 @@
 //Approach:Tabulation
 //TC:O(n^2)
-
+//SC:O(n) ---> 1D array to store the count of BSTs
 class Solution {
     public int numTrees(int n) {
         int dp[]=new int[n+1];
