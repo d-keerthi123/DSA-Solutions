@@ -67,6 +67,6 @@ class Solution {
             ans=Math.min(ans,finalCost);
         }
         
-        return dp[i][j]=ans;
+        return dp[i][j]=ans; 
     }
 }
