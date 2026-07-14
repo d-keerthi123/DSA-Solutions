@@ -20,3 +20,20 @@ class Solution {
 
 //Approach:Prefix Sum
 //TC:O(n^2)
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int maxSum=Integer.MIN_VALUE;
+
+        for(int start=0;start<n;start++){
+            int currSum=0;
+            for(int end=start;end<n;end++){
+                currSum+=nums[end];
+                maxSum=Math.max(currSum,maxSum);
+            }
+        }
+        return maxSum;
+    }
+}
+
+//Approach :
