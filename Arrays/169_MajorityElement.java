@@ -20,8 +20,8 @@ class Solution {
         // return maxElement;
 
         //Boyer-Moore Voting Approach O(n)
-        int count=0;
-        int candidate=0;
+        int count=0; //its current "vote count"
+        int candidate=0; //the element currently considered as the majority
         for(int num :nums){
             if(count==0){  // choose curr element as candidate
                 candidate=num;
