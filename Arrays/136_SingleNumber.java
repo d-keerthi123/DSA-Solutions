@@ -18,3 +18,29 @@ class Solution {
     return -1;
     }
 }
+
+===============================================================================================================================================================
+//TC:O(n)
+//SC:O(1)
+//Approach : HashMap
+
+ class Solution {
+    public int singleNumber(int[] nums) {
+
+        HashMap<Integer,Integer> mp=new HashMap<>();
+
+        //count how many times each num occurs
+        for(int num : nums){
+            mp.put(num,mp.getOrDefault(num,0)+1);
+        }
+
+        // Find the number whose frequency is 1
+        for(int num:mp.keySet()){
+            if(mp.get(num)==1){
+                return num;
+            }
+        }
+
+        return -1;
+    }
+}
