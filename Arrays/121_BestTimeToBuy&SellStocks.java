@@ -12,10 +12,7 @@ class Solution {
                 int profit=prices[i]-bestBuy;
                 maxProfit=Math.max(maxProfit,profit);
             }
-
-            else{
-                bestBuy=Math.min(bestBuy,prices[i]);
-            }
+            bestBuy=Math.min(bestBuy,prices[i]);
         }
 
         return maxProfit;
