@@ -51,7 +51,7 @@ class Solution {
             maxSum=Math.max(currSum,maxSum);
 
             if(currSum<0){
-                currSum=0;
+                currSum=0; //reset to 0
             }
         }
 
