@@ -38,10 +38,15 @@ class Solution {
             int area=h*w;
             maxArea=Math.max(area,maxArea);
 
-            if(h==height[i]){
-                i++;
-            }else{
+            // if(h==height[i]){
+            //     i++;
+            // }else{
+            //     j--;
+            // }
+             if(height[i]>height[j]){
                 j--;
+            }else{
+                i++;
             }
         }
         return maxArea;
