@@ -1,5 +1,6 @@
 //TC:O(n^2)
 //SC:O(1)
+//Brute Force -->Bubble sort
 
 class Solution {
     public void sortColors(int[] nums) {
