@@ -16,3 +16,40 @@ class Solution {
         }
     }
 }
+
+================================================================================================================================
+//TC:O(n)
+//SC:O(1)
+//Approach : Dutch National Flag 
+
+class Solution {
+    public void sortColors(int[] nums) {
+
+        int n=nums.length;
+        int i=0;  //denotes 0
+        int j=0;  //denotes 1
+        int k=n-1;//denotes 2
+
+        while(j<=k){
+            if(nums[j]==2){
+                //swap value of j with k
+                int temp=nums[j];
+                nums[j]=nums[k];
+                nums[k]=temp;
+                k--;
+            }
+
+            else if(nums[j]==0){
+                //swap value of j with i
+                int temp=nums[j];
+                nums[j]=nums[i];
+                nums[i]=temp;
+                i++;
+                j++;
+            }
+
+            else{ //(nums[j]==1)
+                j++;
+            }
+        }
+    }
