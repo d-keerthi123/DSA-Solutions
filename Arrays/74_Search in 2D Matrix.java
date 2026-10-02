@@ -1,5 +1,6 @@
 //TC:O(n^2) bcz its n*n matrix
 //SC:O(1)
+//Approach:Brute Force 
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
@@ -20,6 +21,8 @@ class Solution {
 ======================================================================================================================================
 //TC:O(n+m)
 //SC:O(1)
+//Approach: Two Pointers
+    
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
        int i=0;
@@ -43,6 +46,7 @@ class Solution {
 
 //TC:O(log(m*n))
 //SC:O(1)
+//Approach: Binary Search (sorted array)
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
