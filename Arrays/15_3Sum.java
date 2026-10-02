@@ -69,7 +69,7 @@ class Solution {
         if(n<3){
             return result;
         }
-        result.clear();
+        result.clear(); //empty the existing list, but keep the same list object.
 
         //sort
         Arrays.sort(nums);
