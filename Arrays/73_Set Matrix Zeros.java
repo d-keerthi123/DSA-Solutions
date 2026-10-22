@@ -31,3 +31,37 @@ class Solution {
 
     }
 }
+
+
+//Better Approach
+//TC:O(n*m)
+//SC:O(n+m) --->extra space to store row and column where element is zero
+
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        int row[]=new int[matrix.length];
+        int col[]=new int[matrix[0].length];
+        Arrays.fill(row,-1);
+        Arrays.fill(col,-1);
+
+
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i][j]==0){
+                   row[i]=0;
+                   col[j]=0;
+                }
+            }
+        }
+
+        //set corresponding elements to zero
+       for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i][j]!=0 && row[i]==0 || col[j]==0){
+                   matrix[i][j]=0;
+                }
+            }
+        }
+
+    }
+}
