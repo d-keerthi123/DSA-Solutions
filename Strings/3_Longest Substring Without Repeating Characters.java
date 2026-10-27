@@ -25,3 +25,34 @@ class Solution {
         return max;
     }
 }
+
+
+//Approach:Two-pointers
+//TC:O(n)
+//SC:O(n)
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int max=0;
+        int left=0;
+        int right=0;
+
+        Set<Character> set=new HashSet<>();
+
+        while(right<s.length()){
+
+            char ch=s.charAt(right);
+
+            if(!set.contains(ch)){
+                set.add(ch);
+                max=Math.max(max,right-left+1);
+                right++; //expand the window
+            }else{
+                set.remove(s.charAt(left));
+                left++;  // Shrink the window
+            }
+        }
+        
+        return max;
+    }
+}
