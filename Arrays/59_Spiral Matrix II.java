@@ -1,5 +1,5 @@
-//TC:O(n*n)
-//SC:O(1) auxiliary space
+//TC:O(n^2)
+//SC:O(n^2) 
 
 class Solution {
     public int[][] generateMatrix(int n) {
