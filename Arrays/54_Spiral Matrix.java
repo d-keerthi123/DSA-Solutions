@@ -1,5 +1,5 @@
 //TC:O(m*n)
-//SC:O(1) -->auxiliary space
+//SC: O(m*n)  O(1) -->auxiliary space
 
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
